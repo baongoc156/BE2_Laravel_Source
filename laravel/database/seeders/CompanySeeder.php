@@ -6,7 +6,7 @@ namespace Database\Seeders;
 use App\Models\Company;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Str;
 class CompanySeeder extends Seeder
 {
     /**
@@ -20,8 +20,8 @@ class CompanySeeder extends Seeder
             DB::table('companies')->insert([
                 'company_name' => "ng".$i,
                 'company_web' => "tdc". $i,
-                'company_address' => String::random(10),
-                'company_code' => String::random(10),
+                'company_address' => Str::random(10),
+                'company_code' => Str::random(10),
                 'company_phone' => 01234567,
             ]);
         }

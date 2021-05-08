@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class TrainerSeeder extends Seeder
 {
@@ -18,7 +19,7 @@ class TrainerSeeder extends Seeder
             DB::table('trainers')->insert([
                 'trainer_name' => "a".$i,
                 'company_id' => $i,
-                'trainer_email' => String::random(12)."@gmail.com",
+                'trainer_email' => Str::random(12)."@gmail.com",
                 'trainer_phone' => "01234567",
             ]);
         }
