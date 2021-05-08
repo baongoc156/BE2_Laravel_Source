@@ -16,7 +16,7 @@ class CompanySeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 5000000; $i++) { 
+        for ($i=0; $i < 1000; $i++) { 
             DB::table('companies')->insert([
                 'company_name' => "ng".$i,
                 'company_web' => "tdc". $i,
