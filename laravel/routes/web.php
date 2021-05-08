@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TrainersController;
@@ -21,5 +22,6 @@ Route::get('/', function () {
 });
 
 Route::get('/companies', [CompaniesController::class, 'companies']);
+Route::get('/categories', [CategoryController::class, 'categories']);
 Route::get('/trainers', [TrainersController::class, 'trainers']);
 Route::get('/search', [SearchController::class, 'search'])->name('search');
