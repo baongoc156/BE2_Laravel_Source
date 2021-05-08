@@ -9,4 +9,9 @@ class Category extends Model
 {
     use HasFactory;
     protected $table = 'categories';
+    public function getSelect(){
+        $categories = $this->pluck('category_id', 'category_name');
+        return $categories;
+    }
+ 
 }

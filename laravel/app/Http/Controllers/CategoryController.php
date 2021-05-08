@@ -12,4 +12,5 @@ class CategoryController extends Controller
         $categories = $obj->paginate(15);
         return view('categories',['categories'=>$categories]);
     }
+  
 }
