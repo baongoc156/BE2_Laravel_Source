@@ -37,7 +37,7 @@
         <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-2 text-dark" href="/companies">Company</a>
             <a class="p-2 text-dark" href="/trainers">Trainer</a>
-            <a class="p-2 text-dark" href="/search">Search</a>
+            <a class="p-2 text-dark" href="/trainers/search">Search</a>
 
         </nav>
         <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->

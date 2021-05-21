@@ -24,6 +24,6 @@ Route::get('/', function () {
 Route::get('/companies', [CompaniesController::class, 'companies']);
 Route::get('/categories', [CategoryController::class, 'categories']);
 Route::get('/trainers', [TrainersController::class, 'trainers']);
-Route::get('/search', [SearchController::class, 'searchTrainers']);
-Route::get('/search-company', [SearchController::class, 'searchCompaniesByCategory']);
+Route::get('/trainers/search', [SearchController::class, 'searchTrainers']);
+Route::get('/companies/search', [SearchController::class, 'searchCompaniesByCategory']);
 

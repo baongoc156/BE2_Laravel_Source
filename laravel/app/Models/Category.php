@@ -10,7 +10,7 @@ class Category extends Model
     use HasFactory;
     protected $table = 'categories';
     public function getSelect(){
-        $categories = $this->pluck('category_id', 'category_name');
+        $categories = $this->pluck('category_name','category_id');
         return $categories;
     }
  

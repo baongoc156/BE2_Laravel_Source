@@ -44,53 +44,58 @@
     </div>
 
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Search Trainer</h1>
+        <h1 class="display-4">Search Company</h1>
         <div class="container">
-            <form action="/search" method="GET">
+            <form action="" method="GET">
                 <div class="form-group">
                     <input type="search" name="search" class="form-control" id="search" placeholder="Search">
                 </div>
                 <div class="form-group">
-                    {!! Form::select('category_name[]', $categories, null,['class'=>'form-control']) !!}
+                    {!! Form::select('categories', $categories, null,['class'=>'form-control']) !!}
                 </div>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
            
             </form>
+      
         </div>
-
-        {{-- @isset($key) --}}
-        {{-- <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Company ID</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            @foreach ($companies as $company)
-            <tr>
-                <th scope="row">{!! $company->company_id !!}</th>
-                <td>{!! $company->company_name !!}</td>
-                <td>{!! $company->category_id !!}</td>
-                <td>{!! $company->company_web !!}</td>
-                <td>{!! $company->company_address !!}</td>
-                <td>{!! $company->company_code !!}</td>
-                <td>{!! $company->company_phone !!}</td>
-        
+        @if (isset($cateID) || isset($key) )
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category ID</th>
+                <th scope="col">Web</th>
+                <th scope="col">Address</th>
+                <th scope="col">Code</th>
+                <th scope="col">Phone</th>
+                
               </tr>
-            @endforeach
-         
+            </thead>
+            <tbody>
+              @foreach ($companies as $company)
+              <tr>
+                  <th scope="row">{!! $company->company_id !!}</th>
+                  <td>{!! $company->company_name !!}</td>
+                  <td>{!! $company->category_id !!}</td>
+                  <td>{!! $company->company_web !!}</td>
+                  <td>{!! $company->company_address !!}</td>
+                  <td>{!! $company->company_code !!}</td>
+                  <td>{!! $company->company_phone !!}</td>
           
-        
-          </tbody>
-         
-        </table>
-        <div class="pag">  {{ $companies->withQueryString()->links() }}</div> --}}
-        {{-- @endisset --}}
+                </tr>
+              @endforeach
+           
+            
+          
+            </tbody>
+           
+          </table>
+          <div class="pag">  {{ $companies->withQueryString()->links() }}</div>
+        @endif
+    
+       
+  
        
     </div>
 
