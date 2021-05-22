@@ -46,7 +46,7 @@
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-4">Search Trainer</h1>
         <div class="container">
-            <form action="/search" method="GET">
+            <form action="" method="GET">
                 <div class="form-group">
                     <input type="search" name="search" class="form-control" id="search" placeholder="Search">
                 </div>
