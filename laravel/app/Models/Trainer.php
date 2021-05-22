@@ -9,6 +9,11 @@ class Trainer extends Model
 {
     use HasFactory;
     protected $table = 'trainers';
+    protected $primaryKey = 'trainer_id';
+    public function company()
+    {
+        return $this->belongsTo(Company::class,'trainer_id','company_id');
+    }
     public function search($key)
     {
         $result = self::where('trainer_name', 'LIKE', '%'.$key.'%')

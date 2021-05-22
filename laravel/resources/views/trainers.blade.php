@@ -47,7 +47,8 @@
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
-            <th scope="col">Company's ID</th>
+            <th scope="col">Company ID</th>
+            <th scope="col">Company Name</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
             
@@ -58,6 +59,7 @@
           <tr>
               <th scope="row">{!! $trainer->trainer_id !!}</th>
               <td>{!! $trainer->trainer_name !!}</td>
+              <td>{!! $trainer->company->company_name !!}</td>
               <td>{!! $trainer->company_id !!}</td>
               <td>{!! $trainer->trainer_email !!}</td>
               {{-- <td>{!! $trainer->trainer_code !!}</td> --}}

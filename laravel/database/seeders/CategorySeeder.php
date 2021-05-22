@@ -17,6 +17,7 @@ class CategorySeeder extends Seeder
         //
         for ($i=1; $i <= 4; $i++) { 
             DB::table('categories')->insert([
+                'company_id' => $i,
                 'category_name' => "cate".$i,
             ]);
         }

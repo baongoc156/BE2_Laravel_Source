@@ -48,6 +48,7 @@
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
+            <th scope="col">Trainer Name</th>
             <th scope="col">Category ID</th>
             <th scope="col">Web</th>
             <th scope="col">Address</th>
@@ -61,6 +62,7 @@
           <tr>
               <th scope="row">{!! $company->company_id !!}</th>
               <td>{!! $company->company_name !!}</td>
+              <td>{!! $company->trainer->trainer_name !!}</td>
               <td>{!! $company->category_id !!}</td>
               <td>{!! $company->company_web !!}</td>
               <td>{!! $company->company_address !!}</td>

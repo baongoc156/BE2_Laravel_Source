@@ -18,7 +18,8 @@ class CreateTrainersTable extends Migration
             $table->string('trainer_name',55);
             $table->integer('company_id',false);
             $table->string('trainer_email',55);       
-            $table->string('trainer_phone',55); 
+            $table->string('trainer_phone',55);
+            $table->foreign('company_id')->references('trainer_id')->on('companies')->onDelete('cascade'); 
         });
     }
 
