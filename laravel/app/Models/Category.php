@@ -9,6 +9,7 @@ class Category extends Model
 {
     use HasFactory;
     protected $table = 'categories';
+    protected $primaryKey = 'category_id';
     public function company()
     {
       return  $this->belongsTo(Company::class,'category_id','company_id');
