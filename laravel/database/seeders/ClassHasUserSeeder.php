@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-
-class TrainerSeeder extends Seeder
+class ClassHasUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,11 +16,10 @@ class TrainerSeeder extends Seeder
     public function run()
     {
         for ($i=0; $i < 10; $i++) { 
-            DB::table('trainers')->insert([
-                'trainer_name' => "a".$i,
-                'company_id' => $i,
-                'trainer_email' => Str::random(12)."@gmail.com",
-                'trainer_phone' => "01234567",
+            DB::table('classes_has_users')->insert([
+                'class_id' => $i,
+                'status' => Str::random(8),
+                'created_at'=> Carbon::now()
             ]);
         }
     }

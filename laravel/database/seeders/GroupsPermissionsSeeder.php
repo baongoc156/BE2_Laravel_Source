@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
+use DateTime;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-class CategorySeeder extends Seeder
+class GroupsPermissionsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,12 +15,12 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        //
-        for ($i=1; $i <= 4; $i++) { 
-            DB::table('categories')->insert([
-                'company_id' => $i,
-                'category_name' => "cate".$i,
+        for ($i=0; $i < 10; $i++) {
+            DB::table('groups_permissions')->insert([
+                "group_id" => 1,
+                "permission_id" => $i
             ]);
         }
+
     }
 }
